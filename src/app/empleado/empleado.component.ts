@@ -17,6 +17,11 @@ export class EmpleadoComponent implements OnInit {
   verCuadro=true;
   usuRegistrado=false;
   textoDeRegistro="No hay usuarios registrados";
+  empresa="Google";
+
+  cambiaEmpresa(event: Event){
+    this.empresa=(<HTMLInputElement>event.target).value;
+  }
 
   setRegistroUsuario(){
     this.usuRegistrado=false;
